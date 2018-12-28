@@ -15,7 +15,7 @@ global.hackerank = () => {
     eulerNum -= 255
   }
   const url = `https://www.hackerrank.com/contests/projecteuler/challenges/euler${pad(eulerNum, 3)}`
-  UrlFetchApp.fetch(getProperty('DISCORD_WEB_HOOK_URK'), {
+  UrlFetchApp.fetch(getProperty('DISCORD_WEB_HOOK_URL'), {
     method: 'post',
     payload: {
       content: `Today's Hackerrank Project Euler\n${url}`
