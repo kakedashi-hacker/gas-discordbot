@@ -10,11 +10,11 @@ function pad(num, size) {
 global.hackerank = () => {
   const startDate = moment('2018-12-26')
   const today = moment()
-  let eulerNum = today.diff(startDate, 'days') + 1
-  if (eulerNum > 255) {
-    eulerNum -= 255
-  }
-  const url = `https://www.hackerrank.com/contests/projecteuler/challenges/euler${pad(eulerNum, 3)}`
+  const eulerNum = today.diff(startDate, 'days') + 1
+  const url = `https://www.hackerrank.com/contests/projecteuler/challenges/euler${pad(
+    eulerNum > 255 ? eulerNum - 255 : eulerNum,
+    3
+  )}`
   UrlFetchApp.fetch(getProperty('DISCORD_WEB_HOOK_URL'), {
     method: 'post',
     payload: {
