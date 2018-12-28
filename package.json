@@ -1,7 +1,7 @@
 {
-  "name": "boilerplace",
+  "name": "discordbot",
   "version": "1.0.0",
-  "description": "Description",
+  "description": "discord bot for hacker's club kakedashi",
   "main": "src/index.js",
   "scripts": {
     "build": "webpack -p",
